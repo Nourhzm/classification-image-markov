@@ -1,0 +1,5 @@
+function [X, m, n]= lit_image(nom_image)
+X = imread(nom_image);
+X = (X<=127.5)
+[m, n] = size(X);
+end

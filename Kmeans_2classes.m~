@@ -1,0 +1,10 @@
+close all;
+s = [0,255];
+[X,m,n]= lit_image('promenade2.bmp');
+affiche_image(X, 'promenade2.bmp')
+Y = bruit_gauss(X, m, n, 0, 255, 10, 1, 20, 1);
+figure
+affiche_image(Y, 'promenade2.bmp bruitée')
+S=Kmeans_images(X, s, 5000);
+affiche_image(S, 'promenade2.bmp Kmeans')
+tau=taux_erreur(X, S, m, n)

@@ -1,0 +1,14 @@
+close all
+m1=1;
+m2=4;
+sig1=1;
+sig2=1;
+cl1=0;
+cl2=255;
+[X,m,n]= lit_image('city2.bmp')
+affiche_image(X, 'beee2.bmp')
+Y = bruit_gauss(X, m, n, cl1, cl2, m1, sig1, m2, sig2)
+figure
+affiche_image(Y, 'beee2.bmp bruitée')
+tau=taux_erreur(X, Y, m, n)
+

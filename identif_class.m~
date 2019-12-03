@@ -1,0 +1,8 @@
+function [cl1, cl2] = identif_class(X)
+[counts, bins] = imhist(X)
+for i:= 1:size(counts)
+    if counts[i] != 0
+        
+    end
+end
+end
